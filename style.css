@@ -1,0 +1,172 @@
+/* VARIABLES */
+
+:root {
+  --primary-one: hsl(179, 62%, 43%);
+  --primary-two: hsl(71, 73%, 54%);
+  --neutral-one: hsl(204, 43%, 93%);
+  --neutral-two: hsl(218, 22%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--neutral-one);
+}
+
+#page-container {
+  min-height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 98vh;
+  padding: 70px 30px 30px;
+}
+
+.grid-item {
+  background-color: var(--primary-one);
+  padding: 25px;
+}
+
+.grid-item-1 {
+  background-color: #fff;
+  border-radius: 6px 6px 0 0;
+}
+
+.grid-item-3 {
+  opacity: 0.7;
+  border-radius: 0 0 6px 6px;
+}
+
+.main-title {
+  color: var(--primary-one);
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.text {
+  color: var(--neutral-two);
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.title,
+.subscription-text,
+li {
+  color: #fff;
+}
+
+.title {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.green {
+  color: var(--primary-two);
+}
+
+.subscription-price {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.subscription-price span {
+  font-size: 17px;
+  font-weight: 400;
+  opacity: 0.7;
+  padding-left: 5px;
+}
+
+.subscription-text {
+  padding: 6px 0 30px;
+  font-size: 16px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px 0;
+  background-color: var(--primary-two);
+  border: none;
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+li {
+  list-style-type: none;
+  font-size: 14px;
+  padding-bottom: 2px;
+  opacity: 0.7;
+}
+
+/* FOOTER */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* DESKTOP */
+
+@media (min-width: 530px) {
+  .grid-container {
+    grid-template-columns: 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "grid-item-1 grid-item-1"
+      "grid-item-2 grid-item-3";
+    padding: 0 60px;
+  }
+
+  .grid-item {
+    padding: 40px;
+  }
+
+  .grid-item-1 {
+    grid-area: grid-item-1;
+  }
+
+  .grid-item-2 {
+    grid-area: grid-item-2;
+    border-radius: 0 0 0 5px;
+  }
+
+  .grid-item-3 {
+    grid-area: grid-item-3;
+    border-radius: 0 0 5px 0;
+  }
+}
+
+/* SMALLER SCREENS */
+
+@media (min-width: 1000px) and (max-width: 1439px) {
+  .grid-container {
+    grid-template-columns: 30% 30%;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 530px) and (max-width: 999px) {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+    padding: 0 30px;
+  }
+}
